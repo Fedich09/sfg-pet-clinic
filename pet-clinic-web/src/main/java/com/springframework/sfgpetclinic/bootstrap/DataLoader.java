@@ -81,8 +81,8 @@ public class DataLoader implements CommandLineRunner {
         owner1sPet.setBirthDate(LocalDate.parse("2014-09-12"));
         owner1.getPets().add(owner1sPet);
 
-        petService.save(owner1sPet);
         ownerService.save(owner1);
+        petService.save(owner1sPet);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Barbara");
@@ -98,8 +98,8 @@ public class DataLoader implements CommandLineRunner {
         owner2sPet.setBirthDate(LocalDate.parse("2019-07-23"));
         owner1.getPets().add(owner2sPet);
 
-        petService.save(owner2sPet);
         ownerService.save(owner2);
+        petService.save(owner2sPet);
 
         Visit owner2sPetVisit = new Visit();
         owner2sPetVisit.setPet(owner2sPet);
